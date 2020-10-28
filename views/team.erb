@@ -5,10 +5,14 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
 
+   <% params.each do |param, i| %>
+    <% if param == "name" then %>
+      <h1><%= "Team Name: #{i}" %></h1>
+    <% else %>
+      <h2><%= "#{@hash[param.to_sym]}: #{i}"%></h2>
+    <% end %>
+   <% end %>
 
  </body>
 </html>
-
-
